@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<style>
+    #container{
+        margin-top: 100px;
+        margin-left: 500px;
+    }
+    #symbol{
+        margin-left: 80px;
+        font-size: large;
+    }
+</style>
+<body>
+<div id="container">
+    <input id="input_number">
+    <input id="ab">
+    <br>
+    <br>
+    <button onclick="multipli()">ENTER</button>
+    <div id="result_value">
+    </div>
+</div>
+<script>
+
+    var res = "";
+    function multipli(){
+        var tableOf = document.getElementById("input_number").value
+        var sccondinput = document.getElementById("ab").value
+        for(var num=0; num<=sccondinput; num++){
+            
+            var total=(tableOf+" x "+num+"= "+tableOf*num)
+            res += total+"<br>"
+            console.log(total)
+        }
+        document.getElementById("result_value").innerHTML=res;
+    }
+</script>
+</body>
+</html>
